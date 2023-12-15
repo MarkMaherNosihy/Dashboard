@@ -141,12 +141,24 @@ table {
 
 
 /* CSS Styles */
-body {}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #E2E8F0;
+}
+
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    background-color: #E2E8F0;
+    grid-template-columns: 1fr 3fr 1fr;
+    height: 100%;
+
 }
 
 .sidebar {
@@ -175,6 +187,7 @@ body {}
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .sidebar-menu-item svg {
@@ -212,6 +225,7 @@ body {}
     padding: 15px;
     background-color: white;
     display: flex;
+    max-height: 170px;
     flex-direction: column;
 }
 
@@ -287,14 +301,26 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+
 }
+
+.nav-buttons button {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: #1992D4;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 
 .projects {
     display: grid;
     gap: 15px;
     padding: 1.2em 1.2em 1.2em 1.2em;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, 250px);
 
 }
 
@@ -318,7 +344,13 @@ input {
 }
 
 .r-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 20px;
+    padding: 1.2em;
     grid-column: 3/4;
+
 }
 
 .card-options {
@@ -326,11 +358,63 @@ input {
     justify-content: flex-end;
     gap: 10px;
     margin-top: auto;
-
+    cursor: pointer;
 }
 
 .card-options svg {
     width: 25px;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trend h1 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.announcement h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.announcement {
+    padding: 10px 15px;
+}
+
+.announcement:nth-child(1) {
+    border-bottom: solid #D2D2D2 1px;
+}
+
+.announcement:nth-child(2) {
+    border-bottom: solid #D2D2D2 1px;
+}
+
+#r-sidebar-heading {
+    font-size: 1.4rem;
+    font-weight: 900;
 }
 
 img {
